@@ -24,11 +24,11 @@ public class ProdutosFarmacia {
 	private long id; //big int
 
 	@NotNull
-	@Size(min = 2, max = 50)
+	@Size(min = 1, max = 50)
 	private String titulo; //nome do medicamento
 
 	@NotNull
-	@Size(min = 2, max = 25)
+	@Size(min = 1, max = 100)
 	private String qtdEstoque; //quantos medicamentos tem em estoque
 	
 	@NotNull
