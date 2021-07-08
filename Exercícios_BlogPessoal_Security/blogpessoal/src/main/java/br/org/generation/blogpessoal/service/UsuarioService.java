@@ -65,7 +65,7 @@ public class UsuarioService {
 
 				String auth = usuarioLogin.get().getUsuario() + ":" + usuarioLogin.get().getSenha();
 				byte[] encodedAuth = Base64.encodeBase64(auth.getBytes(Charset.forName("US-ASCII"))); //regra-padrão ASCII
-				String authHeader = "Basic " + new String(encodedAuth);
+				String authHeader = "Basic " + new String(encodedAuth); // não esquecer do espaço depois do Basic p gerar o token. sem o espaço não funciona.
 
 				usuarioLogin.get().setToken(authHeader);				
 				usuarioLogin.get().setNome(usuario.get().getNome());
